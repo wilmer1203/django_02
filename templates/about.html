@@ -1,114 +1,116 @@
 <!-- pagina about sobre mi website inventada -->
 {% extends 'includes/navbar.html' %}
+{% load static %}
 
 {% block content %}
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>About Us - Inventda</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                line-height: 1.6;
-                margin: 0;
-                padding: 0;
-                background-color: #f4f4f4;
-            }
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<main class="about-container">
 
-            header {
-                background-color: #333;
-                color: white;
-                text-align: center;
-                padding: 2rem;
-            }
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Nuestra Historia</h1>
+            <p class="hero-subtitle">Innovando desde 2020</p>
+        </div>
+    </section>
 
-            .container {
-                max-width: 1200px;
-                margin: 0 auto;
-                padding: 2rem;
-            }
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+        <div class="section-header">
+            <h2 class="section-title">Nuestra Evolución</h2>
+            <div class="section-divider"></div>
+        </div>
 
-            .section {
-                background-color: white;
-                padding: 2rem;
-                margin-bottom: 2rem;
-                border-radius: 5px;
-                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            }
-
-            .team-member {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-                gap: 2rem;
-                margin-top: 2rem;
-            }
-
-            .member-card {
-                text-align: center;
-                padding: 1rem;
-            }
-
-            .member-card img {
-                width: 150px;
-                height: 150px;
-                border-radius: 50%;
-                object-fit: cover;
-                margin-bottom: 1rem;
-            }
-
-            footer {
-                background-color: #333;
-                color: white;
-                text-align: center;
-                padding: 1rem;
-                position: relative;
-                bottom: 0;
-                width: 100%;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <h1>Sobre Inventda</h1>
-            <p>Innovando el futuro, hoy</p>
-        </header>
-
-        <div class="container">
-            <div class="section">
-                <h2>Nuestra Historia</h2>
-                <p>Fundada en 2020, Inventda nació de la pasión por crear soluciones tecnológicas innovadoras que transforman la vida cotidiana. Desde nuestros humildes comienzos en un pequeño garaje, hemos crecido hasta convertirnos en líderes del sector en desarrollo tecnológico.</p>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">2020</div>
+                <div class="timeline-content">
+                    <h3>Fundación</h3>
+                    <p>Nacimos como startup en un pequeño garaje con 3 empleados</p>
+                </div>
             </div>
 
-            <div class="section">
-                <h2>Nuestra Misión</h2>
-                <p>Crear tecnología accesible y sostenible que empodere a las personas y empresas para alcanzar su máximo potencial, manteniendo siempre un compromiso con la excelencia y la innovación responsable.</p>
+            <div class="timeline-item">
+                <div class="timeline-date">2021</div>
+                <div class="timeline-content">
+                    <h3>Primer Producto</h3>
+                    <p>Lanzamiento de nuestra plataforma de IA empresarial</p>
+                </div>
             </div>
 
-            <div class="section">
-                <h2>Nuestro Equipo</h2>
-                <div class="team-member">
-                    <div class="member-card">
-                        <h3>Alex Martínez</h3>
-                        <p>CEO y Fundador</p>
-                    </div>
-                    <div class="member-card">
-                        <h3>Sara Johnson</h3>
-                        <p>CTO</p>
-                    </div>
-                    <div class="member-card">
-                        <h3>Maya Chen</h3>
-                        <p>Lead Designer</p>
-                    </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2023</div>
+                <div class="timeline-content">
+                    <h3>Expansión Global</h3>
+                    <p>Apertura de 3 sedes internacionales y 50+ empleados</p>
                 </div>
             </div>
         </div>
+    </section>
 
-        <footer>
-            <p>© 2023 Inventda. Todos los derechos reservados.</p>
-            <p>Contáctanos: info@inventda.com | Tel: +1 234 567 890</p>
-        </footer>
-    </body>
-    </html>
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="section-header">
+            <h2 class="section-title">El Equipo</h2>
+            <p class="section-subtitle">Mentes brillantes detrás de la innovación</p>
+        </div>
+
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="member-photo">
+                    <img src="{% static 'img/team1.jpg' %}" alt="CEO">
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <h3 class="member-name">Alex Martínez</h3>
+                <p class="member-role">CEO & Fundador</p>
+            </div>
+
+            <div class="team-card">
+                <div class="member-photo">
+                    <img src="{% static 'img/team2.jpg' %}" alt="CTO">
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-medium"></i></a>
+                    </div>
+                </div>
+                <h3 class="member-name">Sara Johnson</h3>
+                <p class="member-role">Directora Técnica</p>
+            </div>
+
+            <!-- Agrega más team-card según necesidad -->
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="section-header">
+            <h2 class="section-title">Nuestros Pilares</h2>
+            <p class="section-subtitle">Principios que nos guían</p>
+        </div>
+
+        <div class="values-grid">
+            <div class="value-card">
+                <i class="fas fa-rocket value-icon"></i>
+                <h3>Innovación</h3>
+                <p>Buscamos constantemente nuevos horizontes tecnológicos</p>
+            </div>
+
+            <div class="value-card">
+                <i class="fas fa-hand-holding-heart value-icon"></i>
+                <h3>Ética</h3>
+                <p>Tecnología responsable y sostenible</p>
+            </div>
+
+            <div class="value-card">
+                <i class="fas fa-users value-icon"></i>
+                <h3>Equipo</h3>
+                <p>El talento humano como eje central</p>
+            </div>
+        </div>
+    </section>
+</main>
+
 {% endblock %}

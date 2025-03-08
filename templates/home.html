@@ -1,14 +1,95 @@
 {% extends 'includes/navbar.html' %}
-
+{% load static %}
 {% block content %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1 class="hero-title">Transformando Ideas en Realidad Digital</h1>
+                <p class="hero-text">Creamos soluciones tecnológicas que inspiran y transforman industrias</p>
+                <div class="hero-actions">
+                    <a href="{% url 'about' %}" class="btn btn-primary">Explora nuestro mundo</a>
+                    <a href="#contact" class="btn btn-secondary">Contáctanos</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <h1>Esta es mi pagina de website</h1>
+    <!-- Featured Services -->
+    <section class="services">
+        <div class="section-header">
+            <h2 class="section-title">Nuestro Ecosistema Digital</h2>
+            <p class="section-subtitle">Innovación en cada capa tecnológica</p>
+        </div>
+        
+        <div class="services-grid">
+            <article class="service-card">
+                <i class="fas fa-brain service-icon"></i>
+                <h3>Inteligencia Artificial</h3>
+                <p>Sistemas predictivos y soluciones cognitivas adaptadas a tus necesidades</p>
+                <ul class="service-features">
+                    <li>Machine Learning</li>
+                    <li>Procesamiento NLP</li>
+                    <li>Visón Computacional</li>
+                </ul>
+            </article>
 
-    <h2>sean bienvenidos</h2>
+            <article class="service-card">
+                <i class="fas fa-cube service-icon"></i>
+                <h3>Realidad Extendida</h3>
+                <p>Experiencias inmersivas que rompen los límites de lo posible</p>
+                <ul class="service-features">
+                    <li>Realidad Virtual</li>
+                    <li>Realidad Aumentada</li>
+                    <li>Metaverso</li>
+                </ul>
+            </article>
 
-    <!-- parrafo de bienvenidos -->
+            <article class="service-card">
+                <i class="fas fa-shield-alt service-icon"></i>
+                <h3>Ciberseguridad</h3>
+                <p>Protección avanzada para tus activos digitales más valiosos</p>
+                <ul class="service-features">
+                    <li>Ethical Hacking</li>
+                    <li>Blockchain</li>
+                    <li>Encriptación Cuántica</li>
+                </ul>
+            </article>
+        </div>
+    </section>
 
-    <p>Este es un parrafo de bienvenida a mi pagina web</p>
+    <!-- Tech Showcase -->
+    <section class="showcase">
+        <div class="showcase-content">
+            <div class="showcase-text">
+                <h2 class="showcase-title">Laboratorio del Futuro</h2>
+                <p class="showcase-description">En nuestro hub de innovación combinamos:</p>
+                <div class="tech-stack">
+                    <span class="tech-item">IoT</span>
+                    <span class="tech-item">5G</span>
+                    <span class="tech-item">Web3</span>
+                    <span class="tech-item">Quantum</span>
+                </div>
+            </div>
+            <div class="showcase-image">
+                <div class="gradient-box"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta" id="contact">
+        <div class="cta-content">
+            <h2 class="cta-title">¿Listo para el siguiente nivel?</h2>
+            <p class="cta-text">Nuestro equipo de expertos está listo para materializar tu visión</p>
+            <form class="contact-form">
+                <input type="email" placeholder="Ingresa tu email" class="form-input">
+                <button type="submit" class="btn btn-primary">Comenzar aventura</button>
+            </form>
+        </div>
+    </section>
+</main>
 
 {% endblock %}
-
